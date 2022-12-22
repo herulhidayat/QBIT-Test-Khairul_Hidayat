@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphic-Sablon Kaos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: "'Inter', sans-serif",
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('./src/image/hero-bg2.svg')",
+                    }
+                }
+            }
+        }
+      </script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="md:items-center md:justify-between md:flex bg-[#D3EAFF] text-[#04121F] font-inter px-10 w-full drop-shadow-lg sticky top-0 z-50">
+        <div class="my-auto py-2 justify-between items-center flex p-0">
+            <img src="./src/image/logo-poly.svg" alt="logo polymorphic" layout="intrinsic" width="200">
+            <div name="menu" id="menu" class="md:hidden" value=false>
+                <button onclick="setOpen()">
+                    <img
+                        src="./src/image/icons/bars-solid.svg"
+                        alt="dash icon"
+                        layout="intrinsic"
+                        width="24"
+                        height="24"
+                    />
+                </button>
+            </div>
+        </div>
+        <ul class="text-base font-normal md:py-0 py-4 md:pl-0 pl-7 md:flex md:items-center md:justify-between md:opacity-100 opacity-0 md:z-auto md:static absolute top-[-400px]">
+            <li class="md:p-5 py-3 md:my-auto">
+                <a href="#home">Home</a>
+            </li>
+            <li class="md:p-5 py-3 md:my-auto">
+                <a href="#feature">Feature</a>
+            </li>
+            <li class="md:p-5 py-3 md:my-auto">
+                <a href="#testimoni">Portofolio</a>
+            </li>
+            <div class="md:py-0 py-4 md:pl-0 pl-7 md:flex md:items-center md:hidden">
+                <a href="#">
+                    <button class="text-white bg-[#2b76e9] hover:bg-[#2061c5] focus:ring-4 focus:ring-blue-300 font-medium rounded-[12px] text-sm px-5 py-2.5 mr-2 my-auto">Hubungi Kami</button>
+                </a>
+            </div>
+        </ul>
+        <div class="md:py-0 py-4 md:pl-0 pl-7 md:flex md:items-center max-md:hidden">
+            <a href="#">
+                <button class="text-white bg-[#2b76e9] hover:bg-[#2061c5] focus:ring-4 focus:ring-blue-300 font-medium rounded-[12px] text-sm px-5 py-2.5 mr-2 my-auto">Hubungi Kami</button>
+            </a>
+        </div>
+
+    </nav>
+    <section id="home" class="bg-hero-pattern bg-center bg-bottom bg-cover text-[#04121F] font-inter w-full">
+        <div class="flex flex-col items-center gap-[60px] px-6 drop-shadow-2xl">
+            <!-- Implement the carousel -->
+            <div class="rounded-[30px] border-[15px] border-black mt-[70px] w-[940px] relative mx-auto">
+                <div class="slide relative">
+                    <img class="w-full h-[500px] rounded-[15px] object-cover"
+                        src="./src/image/corousel2.jpg">
+                    <div class="absolute bottom-0 w-full px-5 py-3 bg-[#2b76e9]/40 text-center text-white rounded-[15px]">
+                        <span class="drop-shadow-md font-bold">
+                            Custom Baju Sesukamu
+                        </span>
+                    </div>
+                </div>
+
+                <div class="slide relative">
+                    <img class="w-full h-[500px] rounded-[15px] object-cover"
+                        src="./src/image/corousel3.jpg">
+                    <div class="absolute bottom-0 w-full px-5 py-3 bg-[#2b76e9]/40 text-center text-white rounded-[15px]">
+                        <span class="drop-shadow-lg font-bold">
+                            Berbagai Pilihan Motif
+                        </span>
+                    </div>
+                </div>
+
+                <div class="slide relative">
+                    <img class="w-full h-[500px] rounded-[15px] object-cover rounded-[15px]"
+                        src="./src/image/corousel1.jpg">
+                    <div class="absolute bottom-0 w-full px-5 py-3 bg-[#2b76e9]/40 text-center text-white">
+                        <span class="drop-shadow-lg font-bold">
+                            Harga Termurah
+                        </span>
+                    </div>
+                </div>
+
+                <!-- The previous button -->
+                <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-[#2b76e9]/30 hover:bg-[#2b76e9]/50 text-white hover:text-amber-500 cursor-pointer rounded-[15px]"
+                    onclick="moveSlide(-1)">❮</a>
+
+                <!-- The next button -->
+                <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-[#2b76e9]/30 hover:bg-[#2b76e9]/50 text-white hover:text-amber-500 cursor-pointer rounded-[15px]"
+                    onclick="moveSlide(1)">❯</a>
+
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col items-center gap-[60px] px-6 mb-[150px] mt-[150px]">
+        <div class="md:w-[720px] w-full relative">
+            <h1 class="font-bold text-4xl text-center hover:text-[#2061c5] text-[#2b76e9]" alt="Solusi Tepat Pengelolaan Payroll dan HR untuk Bisnis Anda">
+                Sablon Kaosmu Sekarang
+            </h1>
+            <img src="./src/image/panah.svg" class="absolute top-[50px] right-[20px] max-md:hidden animate-pulse" width="90">
+        </div>
+        <div class="md:w-[543px] w-full">
+            <h2 class="font-normal text-base text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laboriosam iure dolorem nobis, tempore quae eligendi molestiae odit vitae nam voluptates. Officia eligendi porro repellat ad ducimus ut eaque culpa?
+            </h2>
+        </div>
+        <div class="md:py-0 py-4 md:pl-0 pl-7 md:flex md:items-center">
+            <a href="#">
+                <button class="text-white bg-[#2b76e9] hover:bg-[#2061c5] focus:ring-4 focus:ring-blue-300 font-medium rounded-[12px] text-sm px-5 py-2.5 mr-2 my-auto animate-bounce">Dapatkan Penawaran Sekarang</button>
+            </a>
+        </div>
+    </section>
+    <section id="feature" class="w-full mb-[150px]">
+        <div class="flex flex-col items-center gap-[30px] px-6 rounded-[20px] bg-[#D3EAFF] py-[50px] mx-10">
+            <div class="md:w-[720px] w-full">
+                <p class="font-bold text-2xl text-center text-[#2b76e9]">Fitur Produk</p>
+            </div>
+            <div class="md:w-[720px] w-full">
+                <h2 class="font-bold text-3xl text-center">
+                    Keunggulan Kami
+                </h2>
+            </div>
+            <div class="md:grid md:grid-cols-3 gap-8 max-md:flex max-md:flex-col max-md:items-center md:mx-[50px]">
+                <div class="flex flex-col items-center hover:bg-white p-5 gap-[10px] rounded-xl hover:scale-105 ease-in duration-300 mx-[30px]">
+                    <div class="w-[60px] h-[60px] rounded-[10px] bg-[#2b76e9] flex items-center">
+                        <img src="./src/image/fitur/dollar-sign-solid.svg" class="w-[30px] h-[30px] mx-auto my-auto">
+                    </div>
+                    <p class="font-bold text-base text-center">Harga Termurah</p>
+                    <p class="font-normal text-base text-center">
+                        Penawaran terbaik dengan harga termurah dapat anda dapatkan di tempat kami.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center hover:bg-white p-5 gap-[10px] rounded-xl hover:scale-105 ease-in duration-300 mx-[30px]">
+                    <div class="w-[60px] h-[60px] rounded-[10px] bg-[#2b76e9] flex items-center">
+                        <img src="./src/image/fitur/shirt-solid.svg" class="w-[30px] h-[30px] mx-auto my-auto">
+                    </div>
+                    <p class="font-bold text-base text-center">Kualitas Kaos Terbaik</p>
+                    <p class="font-normal text-base text-center">
+                        Ada beragam jenis kaos kualitas terbaik dengan spesifikasi 30s, 24, dan Premium.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center hover:bg-white p-5 gap-[10px] rounded-xl hover:scale-105 ease-in duration-300 mx-[30px]">
+                    <div class="w-[60px] h-[60px] rounded-[10px] bg-[#2b76e9] flex items-center">
+                        <img src="./src/image/fitur/fill-drip-solid.svg" class="w-[30px] h-[30px] mx-auto my-auto">
+                    </div>
+                    <p class="font-bold text-base text-center">Kualitas Tinta Sablon Terbaik</p>
+                    <p class="font-normal text-base text-center">
+                        Kami menggunakan tinta sablon terbaik untuk menjaga kualitas sablon kami.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimoni" class="w-full">
+        <div class="flex flex-col items-center gap-[30px] px-6">
+            <div class="md:w-[720px] w-full">
+                <p class="font-bold text-2xl text-center text-[#2b76e9]">Portofolio</p>
+            </div>
+            <div class="md:w-[720px] w-full">
+                <h2 class="font-bold text-3xl text-center">
+                    Kami telah mengerjakan dengan sepenuh hati
+                </h2>
+            </div>
+            <div class="pb-[50px] grid grid-cols-3 gap-5 px-[200px]">
+                <img src="./src/image/porto1.jpg" alt="">
+                <img src="./src/image/porto2.jpg" alt="">
+                <img src="./src/image/porto3.jpg" alt="">
+                <img src="./src/image/porto4.jpg" alt="">
+                <img src="./src/image/porto5.jpg" alt="">
+                <img src="./src/image/porto6.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bg-[#2b76e9] h-full flex flex-col items-center">
+            <img class="mx-auto pt-3 w-[100px]" src="./src/image/logo-poly-white.svg" alt="logo polymorphic" layout="intrinsic" width="200">
+            <p class="text-white p-3">Copyright 2022 - Khairul Hidayat</p>
+        </div>
+    </footer>
+    
+    <script>
+        function setOpen() {
+            let list = document.querySelector('ul')
+            document.getElementById('menu').value === true ? (document.getElementById('menu').value = false, list.classList.add('opacity-100'), list.classList.add('top-[80px]'), list.classList.remove('absolute')) : (document.getElementById('menu').value = true, list.classList.remove('opacity-100'), list.classList.remove('top-[80px]'), list.classList.add('absolute'))
+        }
+    </script>
+    <script>
+        // set the default active slide to the first one
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        // change slide with the prev/next button
+        function moveSlide(moveStep) {
+            showSlide(slideIndex += moveStep);
+        }
+
+        // change slide with the dots
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName('dot');
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            // hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.add('hidden');
+            }
+
+            // remove active status from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-yellow-500');
+                dots[i].classList.add('bg-green-600');
+            }
+
+            // show the active slide
+            slides[slideIndex - 1].classList.remove('hidden');
+
+            // highlight the active dot
+            dots[slideIndex - 1].classList.remove('bg-green-600');
+            dots[slideIndex - 1].classList.add('bg-yellow-500');
+        }
+    </script>
+        
+
+</body>
+</html>
